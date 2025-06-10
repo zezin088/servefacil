@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta viewport="wid=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+
+    <script src="componentes/fullcalendar-6.1.17/dist/index.global.min.js"></script>
+    <script src="componentes/fullcalendar-6.1.17/packages/core/locales/pt-br.global.min.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            locale: 'pt-br',
+            height: 'auto',
+            events: [
+                {
+                    title: 'Reunião com cliente',
+                    start: '2025-06-02T10:00:00',
+                    end: '2025-06-02T11:00:00',
+                },
+                {
+                    title: 'Entrega de projeto',
+                    start: '2025-06-05T14:00:00',
+                    end: '2025-06-05T15:00:00',
+                },
+                {
+                    title: 'Pagamneto',
+                    start: '2025-06-30T07:00:00',
+                    end: '2025-06-30T17:00:00',
+                },
+                {
+                    title: 'Dia dos namorados',
+                    start: '2025-06-12T07:00:00',
+                    end: '2025-06-12T17:00:00',
+                },
+                {
+                    title: 'Corpus Christi',
+                    start: '2025-06-19T07:00:00',
+                    end: '2025-06-19T17:00:00',
+                },
+            ]
+        });
+
+        calendar.render();
+        });
+    </script>
+
+    <title>ServFacíl - Seu app de serviços</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="logo">
+                <h1>
+                    <span class="serv">Serv</span><span class="facil">Facil</span>
+                </h1>
+            </div>
+            <div class="menu-links">
+                <div class="links">
+
+                    <a  href="index.html">
+                        <h2>Inicio</h2>
+                    </a>
+
+                    <a class="ativo" href="Agenda.html">
+                        <h2>Agenda</h2>
+                    </a>
+
+                    <a href="clientes.html">
+                        <h2>Clientes</h2>
+                    </a>
+
+                    <a href="Orcamentos.html">
+                        <h2>Orçamentos</h2>
+                    </a>
+
+                    <a href="produtos.html">
+                        <h2>Produtos</h2>
+                    </a>
+
+                    <a href="Serviocos.html">
+                        <h2>Serviços</h2>
+                    </a>
+
+                    <a href="Fila de trabalho.html">
+                        <h2>Fila de trabalhos</h2>
+                    </a>
+
+                    <a href="Lembretes.html">
+                        <h2>Lembretes</h2>
+                    </a>
+
+
+                    <a href="ordem.html">
+                        <h2>Ordem de Serviços</h2>
+                    </a>
+
+                </div>
+
+                <div class="links">
+                    <a href="sair.html">
+                        <h1>Sair</h1>
+                    </a>
+                </div>
+            </div>
+
+            </div>
+            <div class="conteudo">
+                <div class="agenda">
+                <div id='calendar'></div>
+            </div>
+
+            </div>
+        </div>
+    </body>
+</html>
